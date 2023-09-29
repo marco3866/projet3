@@ -1,1 +1,284 @@
-/*jjj*/
+/* Réinitialisation CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Définir les Polices et Couleurs */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.logo,
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+/* Couleurs */
+.primary {
+    color: #9356DC; /* Couleur Primaire */
+}
+
+.secondary {
+    color: #FF79DA; /* Couleur Secondaire */
+}
+
+/* Styles pour les Éléments */
+header {
+    background-color: #9356DC; /* Couleur Primaire */
+    text-align: center;
+    padding: 1rem 0;
+}
+/* Styles pour Header */
+header {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #FFF; 
+}
+
+.logo-container {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+}
+/* LOGO GPS ET BARRE DE RECHERCHE */
+.search-container {
+    background-color: lightgrey;
+    padding: 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gps-logo {
+    margin-right: 0rem; 
+    font-size: 1.5rem; 
+}
+
+.search-input {
+    text-align: center;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background-color: lightgray;
+}
+
+/* STYLE POUR BUTTON ET TITRE*/
+
+/* Style général pour centrer le contenu et ajouter des marges */
+.container {
+    margin: 0 auto; 
+    padding: 0 2rem; 
+    max-width: 80%; 
+    text-align: center; 
+}
+
+/* Style pour le Titre H1 */
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem; 
+}
+
+/* Style pour le Paragraphe */
+p {
+    font-size: 2rem;
+    margin-bottom: 1.5rem; 
+}
+
+/* Style pour le Bouton */
+.explore-button {
+    display: inline-block; 
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #9356DC, #FF79DA);
+    color: #FFF;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem; 
+    margin-bottom: 2rem; 
+}
+/* Style titre */
+
+.step-container h1 {
+    margin-top: 3rem; 
+    margin-bottom: 1rem; 
+    font-weight: bold;
+    text-align: left;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; 
+    position: relative; 
+}
+/*box complette */
+.box {
+    background-color: #FFF; 
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 0 2.5%; 
+    width: 100%; 
+    height: 50px;
+}
+.text-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-text {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+/* icone seul */
+.icon, .icon-combined i {
+    color: grey; 
+    width: 3%; 
+    margin-left: 10%; 
+}
+
+/* icone combine */
+.icon-combined {
+    margin-left: 10%; 
+    display: flex;
+    align-items: center; 
+}
+
+.icon-combined i {
+    width: 3%; 
+    color: grey; 
+}
+
+.icon-combined .fas.fa-ellipsis-v {
+    margin-right: 2px; 
+}
+
+/* Rond avec numero */
+.circle {
+    position: absolute;
+    left: 1vw; 
+    background-color: #9356DC;
+    color: #FFF;
+    border-radius: 50%;
+    width: 3vw; 
+    height: 3vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+}
+.restaurant-section {
+    background-color: #f0f0f0; 
+    padding: 20px 10px; 
+}
+
+.restaurant-section h1 {
+    margin-bottom: 20px; 
+}
+
+.restaurant-box {
+    background-color: #FFF; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.restaurant-box .img-container {
+    width: 100%; 
+    height: 65%; 
+    overflow: hidden; 
+    position: relative; 
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+}
+/* IMAGE */
+.restaurant-box img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; /
+}
+
+
+.restaurant-box h1, .restaurant-box h2 {
+    margin-left: 5px; 
+    font-weight: normal; 
+}
+
+.new-label {
+    background-color: #40E0D0; 
+    color: #006400; 
+    border-radius: 5px;
+    padding: 5px; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heart-icon {
+    color: linear-gradient(135deg, #9356DC, #FF79DA);
+    margin-right: 10px; 
+    font-size: 24px; 
+}
+
+/* COEUR REMPLI ? */
+.enchanted-heart {
+    background: linear-gradient(135deg, #9356DC, #FF79DA); 
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+
+
+/* FOOTER */
+footer {
+    background-color: rgb(40, 36, 36); 
+    color: #FFF; 
+    padding: 20px; 
+    text-align: left; 
+}
+
+.footer-content h1 {
+    font-weight: bold; 
+}
+
+.footer-line {
+    margin-top: 10px; 
+    margin-left: 5px;
+    display: flex; 
+    align-items: center; 
+}
+
+.footer-line i {
+    margin-right: 10px; 
+}
+
+main {
+    padding: 1rem;
+}
+
+/* Styles pour Mobile */
+@media (min-width: 768px) {
+    /* Styles pour Tablette et Desktop ici */
+}
