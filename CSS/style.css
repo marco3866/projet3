@@ -151,6 +151,7 @@ p {
     width: 3%;  /* ou la taille de votre icône */
     margin-left: 10%; 
     cursor: pointer;
+    margin-top: -18px;
 }
 
 .under-icon {
@@ -179,34 +180,58 @@ p {
 .icon-combined {
     margin-left: 10%; 
     display: flex;
-    align-items: center; 
+    align-items: center;
+    margin-top: -5px; 
 }
 
 .icon-combined .fas.fa-ellipsis-v {
-    margin-right: 2px; 
+    margin-right: 5px; 
+    
 }
 
 
 /* Rond avec numero */
 
+.step-container h1 {
+    margin-top: 3rem; 
+    margin-bottom: 1rem; 
+    font-weight: bold;
+    text-align: left;
+}
+
 .step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; 
+    position: relative; 
+}
+.step-text {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+.step-text.decalage {
     position: relative;
+    left: 5px; /* Ajustez cette valeur pour obtenir le décalage souhaité */
+}
+.step-text.decalagedroite {
+    position: relative;
+    left: -5px; /* Ajustez cette valeur pour obtenir le décalage souhaité vers la droite */
 }
 
 .circle {
     position: absolute;
-    top: 45%;   /* Centre le cercle verticalement par rapport à l'élément parent */
-    left: 1vw;
-    transform: translateX(-50%);  /* ajuste l'alignement horizontal */
+    left: 3vw; 
     background-color: #9356DC;
     color: #FFF;
-    border-radius: 80%;
-    width: 4vw;
-    height: 4vw;
+    border-radius: 50%;
+    width: 29px; 
+    height: 29px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 2rem;
+    transform: translateX(-50%);
+    bottom: 12px;
 }
 .restaurant-section {
     background-color: #f0f0f0; 
