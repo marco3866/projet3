@@ -19,7 +19,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="Images et textes Ohmyfood\images\logo\ohmyfood.png" alt="Logo Ohmyfood">
+            <h1>Oh myfood</h1>
         </div>
     </header> 
     <main> 
@@ -38,7 +38,10 @@
             <div class="step">
                 <div class="circle">1</div>
                 <div class="box">
-                    <i class="fas fa-mobile-alt icon"></i>
+                    <div class="icon-mask">
+                        <i class="fas fa-store under-icon"></i>
+                        <i class="fas fa-store over-icon"></i>
+                    </div>
                     <div class="text-container">
                         <span class="step-text">Choisissez un restaurant</span>
                     </div>
@@ -49,8 +52,14 @@
                 <div class="circle">2</div>
                 <div class="box">
                     <div class="icon-combined">
-                        <i class="fas fa-ellipsis-v"></i>
-                        <i class="fas fa-bars"></i>
+                        <div class="icon-mask">
+                            <i class="fas fa-ellipsis-v under-icon"></i>
+                            <i class="fas fa-ellipsis-v over-icon"></i>
+                        </div>
+                        <div class="icon-mask">
+                            <i class="fas fa-bars under-icon"></i>
+                            <i class="fas fa-bars over-icon"></i>
+                        </div>
                     </div>
                     <div class="text-container">
                         <span class="step-text">Choisissez votre menu</span>
@@ -59,11 +68,11 @@
             </div>
                             
             <div class="step">
-                <div class="circle">2</div>
+                <div class="circle">3</div>
                 <div class="box">
-                    <div class="icon-combined">
-                        <i class="fas fa-ellipsis-v"></i>
-                        <i class="fas fa-bars"></i>
+                    <div class="icon-mask">
+                        <i class="fas fa-mobile-alt under-icon"></i>
+                        <i class="fas fa-mobile-alt over-icon"></i>
                     </div>
                     <div class="text-container">
                         <span class="step-text">Choisissez votre menu</span>
@@ -75,71 +84,102 @@
 
         <div class="restaurant-section">
             <h1>Restaurants</h1>
-            
-            <div class="restaurant-box">
-                <div class="img-container">
-                    <img src="P:\FORMATION OPEN CLASSROOM JAVASCRIPT\projet 3\Projet-3\Images et textes Ohmyfood\images\restaurants\La palette du goût.jpg" alt="La palette du goût">
-                </div>
-                <div class="title-container">
-                    <h1>La palette du goût</h1>
-                    <i class="far fa-heart heart-icon"></i> <!-- icone de cœur -->
-                </div>
-                <h2>Ménilmontant</h2>
-                <div class="new-label">Nouveau</div>
-            </div>
-            
-            <div class="restaurant-box">
-                <div class="img-container">
-                    <img src="P:\FORMATION OPEN CLASSROOM JAVASCRIPT\projet 3\Projet-3\Images et textes Ohmyfood\images\restaurants\la note enchantée.jpg" alt="la note enchantée">
-                </div>
-                <div class="title-container">
-                    <h1>la note enchantée</h1>
-                    <i class="far fa-heart heart-icon enchanted-heart"></i> <!-- icone de cœur avec classe supplementaire -->
-                </div>
-                <h2>Charonne</h2>
-                <div class="new-label">Nouveau</div>
-            </div>
-            
-            <div class="restaurant-box">
-                <div class="img-container">
-                    <img src="P:\FORMATION OPEN CLASSROOM JAVASCRIPT\projet 3\Projet-3\Images et textes Ohmyfood\images\restaurants\A la française .jpg" alt="A la française">
-                </div>
-                <div class="title-container">
-                    <h1>A la française</h1>
-                    <i class="far fa-heart heart-icon"></i> <!-- coeur -->
-                </div>
-                <h2>Cité rouge</h2>
-            </div>
-            
-            <div class="restaurant-box">
-                <div class="img-container">
-                    <img src="P:\FORMATION OPEN CLASSROOM JAVASCRIPT\projet 3\Projet-3\Images et textes Ohmyfood\images\restaurants\Les délices des sens.jpg" alt="Les délices des sens">
-                </div>
-                <div class="title-container">
-                    <h1>Les délices des sens</h1>
-                    <i class="far fa-heart heart-icon"></i> <!-- c -->
-                </div>
-                <h2>Folie-Méricourt</h2>
+<a href="restaurant\La palette du goût.html">
+    <div class="restaurant-box">
+        <a href="restaurant\La palette du goût.html"></a>
+        <div class="img-container">
+            <img src="Images et textes Ohmyfood\images\restaurants\La palette du goût.jpg" alt="La palette du goût">
+        </a>
+        </div>
+        <a href="restaurant\La palette du goût.html"></a>
+        <div class="title-container">
+            <h1>La palette du goût</h1>
+        </a>
+            <div class="heart-icon">
+                <i class="fas fa-heart under-heart"></i>
+                <i class="far fa-heart over-heart"></i>
             </div>
         </div>
+        <h2>Ménilmontant</h2>
+        <div class="new-label">Nouveau</div>
+    </div>
+
+        
+
+    <div class="restaurant-box">
+        <a href="restaurant\La note enchantée.html"></a>
+        <div class="img-container">
+            <img src="Images et textes Ohmyfood\images\restaurants\la note enchantée.jpg" alt="la note enchantée">
+        </a>
+        </div>
+        <a href="restaurant\La note enchantée.html"></a>
+        <div class="title-container">
+            <h1>la note enchantée</h1>
+        </a>
+            <div class="heart-icon">
+                <i class="fas fa-heart under-heart"></i>
+                <i class="far fa-heart over-heart"></i>
+            </div>
+        </div>
+        <h2>Charonne</h2>
+        <div class="new-label">Nouveau</div>
+    </div>
+
+            
+
+    <div class="restaurant-box">
+        <a href="restaurant\À la française.html"></a>
+        <div class="img-container">
+            <img src="Images et textes Ohmyfood\images\restaurants\A la française .jpg" alt="A la française">
+        </a>
+        </div>
+        <a href="restaurant\À la française.html"></a>
+        <div class="title-container">
+            <h1>A la française</h1>
+        </a>
+            <div class="heart-icon">
+                <i class="fas fa-heart under-heart"></i>
+                <i class="far fa-heart over-heart"></i>
+            </div>
+        </div>
+        <h2>Cité rouge</h2>
+    </div>
+            
+    <div class="restaurant-box">
+        <a href="restaurant\Le délice des sens.html"></a>
+        <div class="img-container">
+            <img src="Images et textes Ohmyfood\images\restaurants\Les délices des sens.jpg" alt="Les délices des sens">
+        </a>
+        </div>
+        <a href="restaurant\Le délice des sens.html"></a>
+        <div class="title-container">
+            <h1>Les délices des sens</h1>
+        </a>
+            <div class="heart-icon">
+                <i class="fas fa-heart under-heart"></i>
+                <i class="far fa-heart over-heart"></i>
+            </div>
+        </div>
+        <h2>Folie-Méricourt</h2>
+    </div>
     </main>
     <footer>
         
-            <div class="footer-content">
-                <h1>Oh myfood</h1>
-                <div class="footer-line">
-                    <i class="fas fa-utensils"></i> <span>Proposer un restaurant</span>
-                </div>
-                <div class="footer-line">
-                    <i class="fas fa-handshake"></i> <span>Devenir partenaire</span>
-                </div>
-                <div class="footer-line">
-                    <span>Mentions légales</span>
-                </div>
-                <div class="footer-line">
-                    <span>Contact</span>
-                </div>
+        <div class="footer-content">
+            <h1>Oh myfood</h1>
+            <div class="footer-line">
+                <i class="fas fa-utensils"></i> <span>Proposer un restaurant</span>
             </div>
+            <div class="footer-line">
+                <i class="fas fa-handshake"></i> <span>Devenir partenaire</span>
+            </div>
+            <div class="footer-line">
+                <span>Mentions légales</span>
+            </div>
+            <div class="footer-line">
+                <span><a href="mailto:example@example.com" class="footer-email-link">Contact</a></span>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

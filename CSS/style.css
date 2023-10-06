@@ -1,19 +1,31 @@
 /* Réinitialisation CSS */
-* {
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+main {
+    width: 100vw; /* Pour occuper toute la largeur */
+    box-sizing: border-box; /* Pour s'assurer que la padding et la bordure sont incluses dans la largeur totale */
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Définir les Polices et Couleurs */
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
+    width: 100vw;
 }
 
 .logo,
 h1 {
     font-family: 'Shrikhand', cursive;
+    width: 100%;
 }
 
 /* Couleurs */
@@ -24,27 +36,12 @@ h1 {
 .secondary {
     color: #FF79DA; /* Couleur Secondaire */
 }
-
-/* Styles pour les Éléments */
-header {
-    background-color: #9356DC; /* Couleur Primaire */
-    text-align: center;
-    padding: 1rem 0;
-}
 /* Styles pour Header */
 header {
     text-align: center;
     padding: 1rem 0;
     background-color: #FFF; 
-}
-
-.logo-container {
-    margin-bottom: 1rem;
-}
-
-.logo {
-    width: 100px; 
-    height: auto;
+    width: 100%; /* Utilisez 100% plutôt que 100vw pour éviter les problèmes de défilement */
 }
 /* LOGO GPS ET BARRE DE RECHERCHE */
 .search-container {
@@ -102,24 +99,32 @@ p {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 2rem; 
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
+    border-radius: 1rem; 
 }
 /* Style titre */
 
-.step-container h1 {
-    margin-top: 3rem; 
-    margin-bottom: 1rem; 
-    font-weight: bold;
-    text-align: left;
+/*box complette */
+
+.restaurant-section {
+    width: 100vw;        /* Pour occuper toute la largeur */
+    box-sizing: border-box; /* Pour s'assurer que la padding et la bordure sont incluses dans la largeur totale */
+    border: none;       /* Pour s'assurer qu'il n'y a pas de bordure */
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;          /* Pour s'assurer qu'il n'y a pas de marges externes */
+    padding: 0;         /* Pour s'assurer qu'il n'y a pas de marges internes */
 }
 
-.step {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem; 
-    position: relative; 
+.restaurant-box {
+    cursor: pointer; /* Changement du curseur en main lorsque vous survolez l'élément */
+    transition: transform 0.2s; /* Animation douce lors du clic */
+    width: 100vw;
 }
-/*box complette */
+
+.restaurant-box:active {
+    transform: scale(0.98); /* Réduit légèrement l'élément lorsqu'il est cliqué */
+}
 .box {
     background-color: #FFF; 
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); 
@@ -129,7 +134,7 @@ p {
     align-items: center;
     justify-content: space-between; 
     margin: 0 2.5%; 
-    width: 100%; 
+    width: 100vw; 
     height: 50px;
 }
 .text-container {
@@ -139,16 +144,35 @@ p {
     justify-content: center;
 }
 
-.step-text {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}
-/* icone seul */
-.icon, .icon-combined i {
-    color: grey; 
-    width: 3%; 
+
+.icon-mask {
+    position: relative;
+    display: inline-block;  /* Pour s'assurer que le masque est de la taille de l'icône */
+    width: 3%;  /* ou la taille de votre icône */
     margin-left: 10%; 
+    cursor: pointer;
+}
+
+.under-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: linear-gradient(135deg, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.over-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: grey;
+    transition: color 0.3s;
+}
+
+.icon-mask:hover .over-icon {
+    color: transparent;
 }
 
 /* icone combine */
@@ -158,32 +182,37 @@ p {
     align-items: center; 
 }
 
-.icon-combined i {
-    width: 3%; 
-    color: grey; 
-}
-
 .icon-combined .fas.fa-ellipsis-v {
     margin-right: 2px; 
 }
 
+
 /* Rond avec numero */
+
+.step {
+    position: relative;
+}
+
 .circle {
     position: absolute;
-    left: 1vw; 
+    top: 45%;   /* Centre le cercle verticalement par rapport à l'élément parent */
+    left: 1vw;
+    transform: translateX(-50%);  /* ajuste l'alignement horizontal */
     background-color: #9356DC;
     color: #FFF;
-    border-radius: 50%;
-    width: 3vw; 
-    height: 3vw; 
+    border-radius: 80%;
+    width: 4vw;
+    height: 4vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(-50%);
+    margin-left: 2rem;
 }
 .restaurant-section {
     background-color: #f0f0f0; 
-    padding: 20px 10px; 
+    padding: 20px 10px;
+    overflow: hidden;
+    width: 100vw;   
 }
 
 .restaurant-section h1 {
@@ -209,7 +238,7 @@ p {
 /* IMAGE */
 .restaurant-box img {
     width: 100%; 
-    height: 200px; 
+    height: 150px;
     object-fit: cover; 
     border-top-left-radius: 10px; 
     border-top-right-radius: 10px; /
@@ -218,7 +247,7 @@ p {
 
 .restaurant-box h1, .restaurant-box h2 {
     margin-left: 5px; 
-    font-weight: normal; 
+    font-weight: normal;
 }
 
 .new-label {
@@ -235,28 +264,53 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} 
+
 
 .heart-icon {
-    color: linear-gradient(135deg, #9356DC, #FF79DA);
-    margin-right: 10px; 
-    font-size: 24px; 
+    position: relative;
+    width: 24px; 
+    height: 24px; 
+    font-size: 24px;
+    margin-right: 20px;
 }
 
-/* COEUR REMPLI ? */
-.enchanted-heart {
-    background: linear-gradient(135deg, #9356DC, #FF79DA); 
+.under-heart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: linear-gradient(135deg, #9356DC, #FF79DA);
     -webkit-background-clip: text;
-    color: transparent; 
+    background-clip: text;
+    z-index: 1;
+    transition: opacity 0.3s; /* Ajout d'une transition pour l'opacité */
+    opacity: 0; /* Par défaut, c'est transparent */
 }
 
+.over-heart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    z-index: 2;
+}
+
+.heart-icon:hover .under-heart {
+    opacity: 1; /* Lors du survol, le cœur plein devient visible */
+}
+
+.heart-icon:hover .over-heart {
+    opacity: 0; /* Lors du survol, le cœur vide est masqué */
+}
 
 /* FOOTER */
 footer {
     background-color: rgb(40, 36, 36); 
     color: #FFF; 
     padding: 20px; 
-    text-align: left; 
+    text-align: left;
+    width: 100%; 
 }
 
 .footer-content h1 {
@@ -269,13 +323,17 @@ footer {
     display: flex; 
     align-items: center; 
 }
+.footer-email-link {
+    text-decoration: none;  /* supprime le soulignement */
+    color: inherit;         /* utilise la couleur du texte parent */
+}
+
+.footer-email-link:hover {
+    text-decoration: underline; /* ajoute un soulignement lors du survol pour indiquer qu'il s'agit d'un lien cliquable */
+}
 
 .footer-line i {
     margin-right: 10px; 
-}
-
-main {
-    padding: 1rem;
 }
 
 /* Styles pour Mobile */
