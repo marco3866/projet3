@@ -9,6 +9,7 @@ main {
     width: 100%; /* Pour occuper toute la largeur */
     box-sizing: border-box; /* Pour s'assurer que la padding et la
      bordure sont incluses dans la largeur totale */
+     overflow: hidden;
 }
 
 a {
@@ -20,7 +21,7 @@ a {
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
-    width: 100vw;
+    width: 100%;
 }
 
 .logo,
@@ -199,10 +200,12 @@ p {
     display: flex;
     align-items: center; 
     justify-content: center; 
+    font-weight: bold;
+    font-size: 18px;
 }
 .step-text.decalage {
     position: relative;
-    left: 5px; /* Ajustez cette valeur pour obtenir le décalage souhaité */
+    left: 2px; /* Ajustez cette valeur pour obtenir le décalage souhaité */
 }
 .step-text.decalagedroite {
     position: relative;
@@ -229,11 +232,15 @@ p {
     background-color: #f0f0f0; 
     padding: 20px 10px;
     overflow: hidden;
-    width: 100vw;   
+    width: 100%;   
 }
 
 .restaurant-section h1 {
     margin-bottom: 20px; 
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 .restaurant-box {
@@ -267,7 +274,7 @@ p {
     font-weight: normal;
 }
 .h1-decale {
-    margin-left: 20px; /* Ajustez cette valeur selon votre préférence */
+    padding-left: 20px;
 }
 
 .new-label {
