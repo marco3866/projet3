@@ -6,8 +6,9 @@
     box-sizing: border-box;
 }
 main {
-    width: 100vw; /* Pour occuper toute la largeur */
-    box-sizing: border-box; /* Pour s'assurer que la padding et la bordure sont incluses dans la largeur totale */
+    width: 100%; /* Pour occuper toute la largeur */
+    box-sizing: border-box; /* Pour s'assurer que la padding et la
+     bordure sont incluses dans la largeur totale */
 }
 
 a {
@@ -105,21 +106,10 @@ p {
 /* Style titre */
 
 /*box complette */
-
-.restaurant-section {
-    width: 100vw;        /* Pour occuper toute la largeur */
-    box-sizing: border-box; /* Pour s'assurer que la padding et la bordure sont incluses dans la largeur totale */
-    border: none;       /* Pour s'assurer qu'il n'y a pas de bordure */
-    margin: 0;
-    margin-left: 0;
-    margin-right: 0;          /* Pour s'assurer qu'il n'y a pas de marges externes */
-    padding: 0;         /* Pour s'assurer qu'il n'y a pas de marges internes */
-}
-
 .restaurant-box {
     cursor: pointer; /* Changement du curseur en main lorsque vous survolez l'élément */
     transition: transform 0.2s; /* Animation douce lors du clic */
-    width: 100vw;
+    width: 100%;
 }
 
 .restaurant-box:active {
@@ -134,7 +124,7 @@ p {
     align-items: center;
     justify-content: space-between; 
     margin: 0 2.5%; 
-    width: 100vw; 
+    width: 100%; 
     height: 50px;
 }
 .text-container {
@@ -221,17 +211,19 @@ p {
 
 .circle {
     position: absolute;
-    left: 3vw; 
+    left: 3vw;
     background-color: #9356DC;
     color: #FFF;
     border-radius: 50%;
-    width: 29px; 
-    height: 29px; 
+    width: 29px;
+    height: 29px;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translateX(-50%);
-    bottom: 12px;
+    bottom: 10px;
+    PADDING: 10PX;
+    MARGIN-LEFT: 10PX;
 }
 .restaurant-section {
     background-color: #f0f0f0; 
@@ -273,6 +265,9 @@ p {
 .restaurant-box h1, .restaurant-box h2 {
     margin-left: 5px; 
     font-weight: normal;
+}
+.h1-decale {
+    margin-left: 20px; /* Ajustez cette valeur selon votre préférence */
 }
 
 .new-label {
