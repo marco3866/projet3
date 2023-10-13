@@ -149,9 +149,12 @@ html, body {
     opacity: 0; /* Lors du survol, le cœur vide est masqué */
 }
 
-/* BLOC DE 3 */
+/* BLOC de 3 */
 
-.items-container {
+/* Conteneur principal pour tous vos éléments. 
+   Utilise le flexbox pour aligner ses enfants en colonne (verticalement).
+   Les éléments à l'intérieur sont centrés horizontalement. */
+   .items-container {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -159,6 +162,9 @@ html, body {
     width: 100%;
 }
 
+/* Style de chaque élément individuel. 
+   Fond blanc, coins arrondis, occupe toute la largeur disponible du conteneur.
+   La propriété 'position: relative' est utilisée pour les enfants qui ont une position absolue. */
 .item {
     background-color: white;
     border-radius: 10px;
@@ -169,32 +175,45 @@ html, body {
     transition: background-color 0.3s;
 }
 
+/* Style pour le titre de chaque élément. 
+   Affiché en gras, avec un espace à droite pour éviter la superposition avec la checkbox. */
 .item-title {
     font-weight: bold;
     display: inline-block;
     margin-right: 10px; 
     font-size: 18px;
+    padding-right: 10%;
 }
 
+/* Style de la description. 
+   Réglé pour avoir une largeur maximale de 80%, ce qui signifie qu'à un certain point, 
+   il commencera à envelopper son contenu sur plusieurs lignes. */
 .item-description {
     font-size: 0.9em; 
     margin: 10px 0;
+    max-width: 80%;
 }
 
+/* Conteneur pour la description et le prix. 
+   Par défaut, la description et le prix sont côte à côte (flex-direction: row). */
 .item-content {
     display: flex;
     justify-content: space-between;
     width: 100%;
     position: relative;
+    flex-direction: row;
 }
 
+/* Style pour le prix. 
+   Positionné absolument par rapport à son parent le plus proche ayant une position relative (ici, .item). */
 .item-price {
-    position: absolute; /* Positionnement absolu */
-    right: 5px; /* Aligné à droite avec une marge de 10px */
-    bottom: 10px; /* Décalé de 10px par rapport au bas de l'élément parent */
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
     transition: transform 0.4s; 
 }
 
+/* Style pour l'effet de coche lorsqu'un élément est sélectionné. */
 .clicked-effect {
     position: absolute;
     top: 0;
@@ -210,30 +229,47 @@ html, body {
     transition: width 0.5s;
 }
 
+/* Style pour l'icône de vérification. Par défaut, elle est cachée. */
 .fa-check {
     color: white; 
     display: none;
 }
 
+/* La checkbox est cachée, car nous utilisons un effet de style personnalisé pour la sélection. */
 .item-checkbox {
     display: none; 
 }
 
+/* Lorsqu'un élément est cochée, l'effet de coche s'élargit pour révéler l'icône de vérification. */
 .item-checkbox:checked + label .clicked-effect {
     width: 15%; 
 }
 
-.item-checkbox:checked + label .item-price {
-    transform: translateX(-50%);
-}
-
+/* L'icône de vérification est affichée lorsque l'élément est coché. */
 .item-checkbox:checked + label .fa-check {
     display: inline-block;
 }
 
+/* Lorsqu'un élément est cochée, le prix est déplacé vers la gauche. */
 .item-checkbox:checked + label .item-content .item-price {
-    transform: translateX(calc(-100% + 10px)); /* Translation en utilisant la valeur calculée */
+    right: auto;
+    left: calc(70% + 10px);
+    top: 40%;
+    transform: translateY(-50%);
 }
+
+/* Lorsqu'un élément est cochée, la disposition des éléments à l'intérieur de .item-content est modifiée 
+   pour que la description et le prix soient l'un sur l'autre. */
+.item-checkbox:checked + label .item-content {
+    flex-direction: column;
+}
+
+/* Lorsqu'un élément est cochée, la largeur maximale de la description est réduite, 
+   ce qui lui permet de passer à la ligne plus tôt. */
+.item-checkbox:checked + label .item-description {
+    max-width: 50%;
+}
+
 /* FOOTER */
 footer {
     background-color: rgb(40, 36, 36); 
