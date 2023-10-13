@@ -80,7 +80,6 @@ header {
 /* Style pour le Titre H1 */
 h1 {
     font-weight: bold;
-    font-size: 2rem;
     margin-bottom: 1.5rem; 
 }
 
@@ -188,6 +187,7 @@ p {
     margin-bottom: 1rem; 
     font-weight: bold;
     text-align: left;
+    font-style: normal;
 }
 
 .step {
@@ -401,5 +401,98 @@ footer {
 
 /* Styles pour Mobile */
 @media (min-width: 768px) {
-    /* Styles pour Tablette et Desktop ici */
+    body {
+        width: 90%;
+        margin: 0 auto; /* Centrer le contenu */
+    }
+    .container p {
+        font-size: 1rem; /* ou n'importe quelle autre taille que vous préférez */
+    }
+
+    /* Circle */
+
+
+.steps-wrapper {
+    display: flex;
+    justify-content: space-between; /* pour espacer les éléments .step */
+    margin-bottom: 30px;
+}
+
+.step {
+    display: flex; 
+    align-items: center; 
+    flex: 1; 
+    margin-bottom: 0; 
+    position: relative; /* Ajouté pour positionner le cercle par rapport à ce conteneur */
+    padding-left: 25px; /* Ajouté pour éviter que le contenu de la boîte ne soit trop proche du cercle */
+}
+
+.circle {
+    position: absolute; /* Pour positionner le cercle par rapport au .step */
+    left: 15px; /* 20% du cercle touche le .step */
+    margin-right: 0; /* Suppression de la marge à droite puisque nous utilisons la position absolue */
+}
+.icon-mask, .icon-combined {
+    margin-right: 20px; /* Ajustez cette valeur selon vos besoins */
+}
+.icon-combined .icon-mask {
+    margin-right: 5px; /* Annule la marge pour les icônes à l'intérieur de .icon-combined */
+}
+
+.restaurant-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.restaurant-box {
+    width: calc(50% - 15px);
+}
+
+/* Ajustement pour le titre et le texte */
+.restaurant-box h1,
+.restaurant-box h2 {
+    margin: 0px 0; /* Ajoute de l'espace au-dessus et en dessous du titre et du texte */
+}
+/* Styles généraux du pied de page */
+
+/* Conteneur principal du pied de page */
+.footer-wrapper {
+    display: flex;
+    justify-content: flex-end; /* Espace entre les éléments */
+    align-items: center; /* Centre les éléments verticalement */
+    width: 100%;
+}
+
+/* Contenu du pied de page (éléments du pied de page) */
+.footer-content {
+    display: flex;
+    align-content: center; /* Modifié pour aligner les lignes flexibles */
+    justify-content: space-between;
+    width: 80%;
+}
+/* Supprimez la propriété white-space: nowrap; pour ces classes */
+.footer-legal,
+.footer-contact,
+.footer-propose,
+.footer-partner {
+    order: 1;
+}
+
+/* Chaque groupe d'éléments (logo, mentions légales, contact, etc.) */
+.footer-group {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    margin-left: 20px; /* Espace à gauche de chaque groupe */
+}
+
+/* Style spécifique pour le logo "Oh myfood" */
+.footer-logo {
+    order: 5; /* Ordre d'affichage */
+    margin-left: auto; /* Pousse "Oh myfood" tout à droite */
+    margin-top: 20px;
+    font-size: 10px; /* Taille de police */
+    font-weight: bold; /* Texte en gras */
+}
+
 }

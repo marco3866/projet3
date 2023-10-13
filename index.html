@@ -36,56 +36,61 @@
         </div>
         <div class="step-container">
             <h1 class="h1-decale">Fonctionnement</h1>
-                
-            <div class="step">
-                <div class="circle">1</div>
-                <div class="box">
-                    <div class="icon-mask">
-                        <i class="fas fa-store under-icon"></i>
-                        <i class="fas fa-store over-icon"></i>
-                    </div>
-                    <div class="text-container">
-                        <span class="step-text">Choisissez un restaurant</span>
-                    </div>
-                </div>
-            </div>            
-                
-            <div class="step">
-                <div class="circle">2</div>
-                <div class="box">
-                    <div class="icon-combined">
+        
+            <!-- Nouveau conteneur pour les étapes -->
+            <div class="steps-wrapper">
+                <div class="step">
+                    <div class="circle">1</div>
+                    <div class="box">
                         <div class="icon-mask">
-                            <i class="fas fa-ellipsis-v under-icon"></i>
-                            <i class="fas fa-ellipsis-v over-icon"></i>
+                            <i class="fas fa-store under-icon"></i>
+                            <i class="fas fa-store over-icon"></i>
                         </div>
-                        <div class="icon-mask">
-                            <i class="fas fa-bars under-icon"></i>
-                            <i class="fas fa-bars over-icon"></i>
+                        <div class="text-container">
+                            <span class="step-text">Choisissez un restaurant</span>
                         </div>
                     </div>
-                    <div class="text-container">
-                        <span class="step-text decalage">Composez votre menu</span>
+                </div>
+        
+                <div class="step">
+                    <div class="circle">2</div>
+                    <div class="box">
+                        <div class="icon-combined">
+                            <div class="icon-mask">
+                                <i class="fas fa-ellipsis-v under-icon"></i>
+                                <i class="fas fa-ellipsis-v over-icon"></i>
+                            </div>
+                            <div class="icon-mask">
+                                <i class="fas fa-bars under-icon"></i>
+                                <i class="fas fa-bars over-icon"></i>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <span class="step-text decalage">Composez votre menu</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-                            
-            <div class="step">
-                <div class="circle">3</div>
-                <div class="box">
-                    <div class="icon-mask">
-                        <i class="fas fa-mobile-alt under-icon"></i>
-                        <i class="fas fa-mobile-alt over-icon"></i>
-                    </div>
-                    <div class="text-container">
-                        <span class="step-text decalagedroite">Dégustez au restaurant</span>
+        
+                <div class="step">
+                    <div class="circle">3</div>
+                    <div class="box">
+                        <div class="icon-mask">
+                            <i class="fas fa-mobile-alt under-icon"></i>
+                            <i class="fas fa-mobile-alt over-icon"></i>
+                        </div>
+                        <div class="text-container">
+                            <span class="step-text decalagedroite">Dégustez au restaurant</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
+            </div> <!-- Fin du conteneur .steps-wrapper -->
+
+    
             <div class="restaurant-section">
                 <h1>Restaurants</h1>
                 
                 <!-- Premier restaurant : La palette du goût -->
+                <div class="restaurant-row"> <!-- Nouveau conteneur pour la première ligne -->
                 <div class="restaurant-box">
                     <div class="img-container">
                         <a href="restaurant\La palette du goût.html" class="restaurant-link">
@@ -106,6 +111,7 @@
                     </a>
                     <div class="new-label">Nouveau</div>
                 </div>
+            
             
                 <!-- Deuxième restaurant : La note enchantée -->
                 <div class="restaurant-box">
@@ -128,8 +134,10 @@
                     </a>
                     <div class="new-label">Nouveau</div>
                 </div>
+            </div>   
             
                 <!-- Troisième restaurant : A la française -->
+                <div class="restaurant-row"> <!-- Nouveau conteneur pour la première ligne -->
                 <div class="restaurant-box">
                     <div class="img-container">
                         <a href="restaurant\À la française.html" class="restaurant-link">
@@ -149,7 +157,7 @@
                         <h2>Cité rouge</h2>
                     </a>
                 </div>
-            
+   
             
   <!-- Quatrième restaurant : Les délices des sens -->
   <div class="restaurant-box">
@@ -168,23 +176,27 @@
         <h2>Folie-Méricourt</h2>
     </a>
 </div>
+</div>
 
     </main>
     <footer>
-        
-        <div class="footer-content">
-            <h1>Oh myfood</h1>
-            <div class="footer-line">
-                <i class="fas fa-utensils"></i> <span>Proposer un restaurant</span>
-            </div>
-            <div class="footer-line">
-                <i class="fas fa-handshake"></i> <span>Devenir partenaire</span>
-            </div>
-            <div class="footer-line">
-                <span>Mentions légales</span>
-            </div>
-            <div class="footer-line">
-                <span><a href="mailto:example@example.com" class="footer-email-link">Contact</a></span>
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <div class="footer-group footer-logo">
+                    <h1>Oh myfood</h1>
+                </div>
+                <div class="footer-group footer-legal">
+                    <span>Mentions légales</span>
+                </div>
+                <div class="footer-group footer-contact">
+                    <span><a href="mailto:example@example.com" class="footer-email-link">Contact</a></span>
+                </div>
+                <div class="footer-group footer-propose">
+                    <i class="fas fa-utensils"></i> <span>Proposer un restaurant</span>
+                </div>
+                <div class="footer-group footer-partner">
+                    <i class="fas fa-handshake"></i> <span>Devenir partenaire</span>
+                </div>
             </div>
         </div>
     </footer>

@@ -329,5 +329,10 @@ footer {
 
 /* Styles pour Mobile */
 @media (min-width: 768px) {
-    /* Styles pour Tablette et Desktop ici */
+    body {
+        width: 70%;
+        margin: 0 auto; /* Centrer le contenu */
+    }
 }
+
+
