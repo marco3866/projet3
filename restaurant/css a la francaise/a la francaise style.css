@@ -1,0 +1,272 @@
+/* Réinitialisation CSS */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    width: 100%; /* Pour occuper toute la largeur */
+    box-sizing: border-box; /* Pour s'assurer que la padding et la
+     bordure sont incluses dans la largeur totale */
+     overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Définir les Polices et Couleurs */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    width: 100%;
+    position: relative; /* Assurez-vous d'avoir cette ligne */
+}
+
+.logo,
+h1 {
+    font-family: 'Shrikhand', cursive;
+    width: 100%;
+}
+
+/* Couleurs */
+.primary {
+    color: #9356DC; /* Couleur Primaire */
+}
+
+.secondary {
+    color: #FF79DA; /* Couleur Secondaire */
+}
+/* Styles pour Header */
+header {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #FFF; 
+    width: 100%; /* Utilisez 100% plutôt que 100vw pour éviter les problèmes de défilement */
+}
+
+/* Style pour le Titre H1 */
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem; 
+}
+
+/* Style pour le Paragraphe */
+p {
+    font-size: 2rem;
+    margin-bottom: 1.5rem; 
+}
+
+/* Style titre */
+
+html, body {
+    overflow-x: hidden;
+}
+
+.restaurant-image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block; /* Pour supprimer l'espace sous l'image */
+}
+/* main contenair */
+.block-gray {
+    background-color: #f5f5f5;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    margin-bottom: 5px;
+    position: relative;
+    top: -20px; /* Ajustement pour recouvrir seulement 5% de l'image */
+    display: flex; /* Ajouté pour la mise en page flex */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    justify-content: space-between; /* Place un espace maximal entre les éléments */
+    padding: 10px 20px; /* Ajouté pour donner un peu d'espace autour des contenus */
+    flex-direction: column;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.entree-title {
+    margin: 20px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid turquoise;
+    text-align: left;
+    display: inline-block;  /* Ajouté pour limiter le soulignement à la largeur du mot */
+}
+
+.francaise-title {
+    margin: 0px; /* Ajustez cette valeur selon vos besoins */
+}
+.entree-container {
+    width: 100%; 
+    text-align: left;   /* Ceci est un exemple. Vous pouvez ajuster cette valeur pour aligner le h2 avec le h1 */
+}
+
+
+/*  heart */
+.heart-icon {
+    position: relative;
+    width: 24px; 
+    height: 24px; 
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.under-heart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: linear-gradient(135deg, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    z-index: 1;
+    transition: opacity 0.3s; /* Ajout d'une transition pour l'opacité */
+    opacity: 0; /* Par défaut, c'est transparent */
+}
+
+.over-heart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    z-index: 2;
+}
+
+.heart-icon:hover .under-heart {
+    opacity: 1; /* Lors du survol, le cœur plein devient visible */
+}
+
+.heart-icon:hover .over-heart {
+    opacity: 0; /* Lors du survol, le cœur vide est masqué */
+}
+
+/* BLOC DE 3 */
+
+.items-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.item {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.item-title {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px; 
+    font-size: 18px;
+}
+
+.item-description {
+    font-size: 0.9em; 
+    margin: 10px 0;
+}
+
+.item-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.item-price {
+    position: absolute; /* Positionnement absolu */
+    right: 5px; /* Aligné à droite avec une marge de 10px */
+    bottom: 10px; /* Décalé de 10px par rapport au bas de l'élément parent */
+    transition: transform 0.4s; 
+}
+
+.clicked-effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: turquoise;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s;
+}
+
+.fa-check {
+    color: white; 
+    display: none;
+}
+
+.item-checkbox {
+    display: none; 
+}
+
+.item-checkbox:checked + label .clicked-effect {
+    width: 15%; 
+}
+
+.item-checkbox:checked + label .item-price {
+    transform: translateX(-50%);
+}
+
+.item-checkbox:checked + label .fa-check {
+    display: inline-block;
+}
+
+.item-checkbox:checked + label .item-content .item-price {
+    transform: translateX(calc(-100% + 10px)); /* Translation en utilisant la valeur calculée */
+}
+/* FOOTER */
+footer {
+    background-color: rgb(40, 36, 36); 
+    color: #FFF; 
+    padding: 20px; 
+    text-align: left;
+    width: 100%; 
+}
+
+.footer-content h1 {
+    font-weight: bold; 
+}
+
+.footer-line {
+    margin-top: 10px; 
+    margin-left: 5px;
+    display: flex; 
+    align-items: center; 
+}
+.footer-email-link {
+    text-decoration: none;  /* supprime le soulignement */
+    color: inherit;         /* utilise la couleur du texte parent */
+}
+
+.footer-email-link:hover {
+    text-decoration: underline; /* ajoute un soulignement lors du survol pour indiquer qu'il s'agit d'un lien cliquable */
+}
+
+.footer-line i {
+    margin-right: 10px; 
+}
+
+/* Styles pour Mobile */
+@media (min-width: 768px) {
+    /* Styles pour Tablette et Desktop ici */
+}
