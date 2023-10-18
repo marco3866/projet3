@@ -5,13 +5,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+.header-title {
+    font-family: 'Shrikhand', cursive;
+    width: 100%;
+    text-align: center;
+    /* Ajoutez d'autres styles selon vos besoins */
+}
+
 main {
     width: 100%; /* Pour occuper toute la largeur */
     box-sizing: border-box; /* Pour s'assurer que la padding et la
      bordure sont incluses dans la largeur totale */
      overflow: hidden;
 }
-
+header h1 {
+    color: black;
+    font-family: 'Shrikhand', cursive; /* Applique la police spécifique */
+    font-weight: bold; /* Rend le texte gras */
+}
 a {
     text-decoration: none;
     color: black;
@@ -24,9 +35,10 @@ body {
     width: 100%;
 }
 
-.logo,
-h1 {
-    font-family: 'Shrikhand', cursive;
+.logo, h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Épaisseur de la police */
+    color: black; /* Couleur du texte */
     width: 100%;
 }
 
@@ -289,11 +301,17 @@ html, body {
 
 
 .restaurant-box h1, .restaurant-box h2 {
+    margin-top: 5px;
     margin-left: 5px; 
-    font-weight: normal;
+    font-weight: bold;
 }
 .h1-decale {
     padding-left: 20px;
+}
+.restaurant-box h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: normal;
 }
 
 .new-label {
@@ -395,6 +413,11 @@ footer {
     justify-content: center;
     align-items: center;
     animation: fadeOut 1s 2s forwards;
+}
+.custom-title2 {
+    font-family: 'Shrikhand', cursive; /* Applique la police spécifique */
+    font-weight: bold; /* Rend le texte gras */
+    color: white; /* Couleur du texte (blanc) */
 }
 
 .loader {
