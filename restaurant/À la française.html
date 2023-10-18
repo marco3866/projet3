@@ -19,8 +19,11 @@
 </head>
 <body>
     <header>
-         <h1>Oh myfood</h1>
-    </header> 
+        <a class="back-arrow" href="P:\FORMATION OPEN CLASSROOM JAVASCRIPT\projet 3\Projet-3\index.html">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1>Oh myfood</h1>
+    </header>
     <img class="restaurant-image" src="../Images et textes Ohmyfood/images/restaurants/A la française .jpg" alt="A la française">
     <main class="block-gray">
         <div class="header-container">
@@ -35,67 +38,70 @@
         </div>
 
        <!-- Conteneur pour les 3 blocs -->
-    <div class="items-container">
-
-        <!-- Premier bloc -->
-<div class="item">
-    <input type="checkbox" id="item1" class="item-checkbox">
-    <label for="item1">
-        <h2 class="item-title">Tartare de poulpe acidulé</h2>
-        <div class="item-content">
-            <p class="item-description">Aux zestes d'orange</p>
-            <span class="item-price">25€</span>
-        </div>
-        <div class="clicked-effect"><i class="fas fa-check"></i></div>
-    </label>
-</div>
-    
-
- <!-- Deuxième bloc -->
-<div class="item">
-    <input type="checkbox" id="item2" class="item-checkbox">
-    <label for="item2">
-        <h2 class="item-title">Velouté de légumes d'antan</h2>
-        <div class="item-content">
-            <p class="item-description">Carotte, panais, topinambour</p>
-            <span class="item-price">35€</span>
-        </div>
-        <div class="clicked-effect"><i class="fas fa-check"></i></div>
-    </label>
+<div class="items-container">
+    <!-- Premier bloc -->
+    <div class="item">
+        <input type="checkbox" id="item1" class="item-checkbox">
+        <label for="item1">
+            <h2 class="item-title">Tartare de poulpe acidulé</h2>
+            <div class="item-content">
+                <p class="item-description">Aux zestes d'orange</p>
+                <span class="item-price">25€</span>
+            </div>
+            <div class="clicked-effect"><i class="fas fa-check"></i></div>
+        </label>
     </div>
 
-<!-- Troisième bloc -->
-<div class="item">
-    <input type="checkbox" id="item3" class="item-checkbox">
-    <label for="item3">
-        <h2 class="item-title">Soupe à l'oignon</h2>
-        <div class="item-content">
-            <p class="item-description">Revisitée</p>
-            <span class="item-price">20€</span>
-        </div>
-        <div class="clicked-effect"><i class="fas fa-check"></i></div>
-    </label>
-</div>
-    </main>
+    <!-- Deuxième bloc -->
+    <div class="item">
+        <input type="checkbox" id="item2" class="item-checkbox">
+        <label for="item2">
+            <h2 class="item-title">Velouté de légumes d'antan</h2>
+            <div class="item-content">
+                <p class="item-description">Carotte, panais, topinambour</p>
+                <span class="item-price">35€</span>
+            </div>
+            <div class="clicked-effect"><i class="fas fa-check"></i></div>
+        </label>
+    </div>
 
-    </main>
+    <!-- Troisième bloc -->
+    <div class="item">
+        <input type="checkbox" id="item3" class="item-checkbox">
+        <label for="item3">
+            <h2 class="item-title">Soupe à l'oignon</h2>
+            <div class="item-content">
+                <p class="item-description">Revisitée</p>
+                <span class="item-price">20€</span>
+            </div>
+            <div class="clicked-effect"><i class="fas fa-check"></i></div>
+        </label>
+    </div>
+</div>
+<div class="container">
+    <button class="explore-button">Commander</button>
+</div>
+</main>
+
     <footer>
-        
-        <div class="footer-content">
-            <h1>Oh myfood</h1>
-            <div class="footer-line">
-                <i class="fas fa-utensils"></i> <span>Proposer un restaurant</span>
-            </div>
-            <div class="footer-line">
-                <i class="fas fa-handshake"></i> <span>Devenir partenaire</span>
-            </div>
-            <div class="footer-line">
-                <span>Mentions légales</span>
-            </div>
-            <div class="footer-line">
-                <span><a href="mailto:example@example.com" class="footer-email-link">Contact</a></span>
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <div class="footer-group footer-logo">
+                    <h1>Oh myfood</h1>
+                </div>
+                <div class="footer-group footer-legal">
+                    <span>Mentions légales</span>
+                </div>
+                <div class="footer-group footer-contact">
+                    <span><a href="mailto:example@example.com" class="footer-email-link">Contact</a></span>
+                </div>
+                <div class="footer-group footer-propose">
+                    <i class="fas fa-utensils"></i> <span>Proposer un restaurant</span>
+                </div>
+                <div class="footer-group footer-partner">
+                    <i class="fas fa-handshake"></i> <span>Devenir partenaire</span>
+                </div>
             </div>
         </div>
-    </footer>
 </body>
 </html>

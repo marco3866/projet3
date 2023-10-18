@@ -65,8 +65,13 @@ header {
     border: none;
     outline: none;
     background-color: lightgray;
+    color: black;
+    font-weight: bold;
 }
-
+/* Couleur du texte du placeholder */
+.search-input::placeholder {
+    color: black;
+}
 /* STYLE POUR BUTTON ET TITRE*/
 
 /* Style général pour centrer le contenu et ajouter des marges */
@@ -92,17 +97,24 @@ p {
 /* Style pour le Bouton */
 .explore-button {
     display: inline-block; 
-    padding: 0.5rem 2rem;
+    padding: 1rem 2.5rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     background: linear-gradient(135deg, #9356DC, #FF79DA);
     color: #FFF;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 2rem; 
     margin-bottom: 2rem;
-    border-radius: 1rem; 
+    transition: all 0.3s;  /* Ajout d'une transition pour un effet plus fluide */
 }
+
+.explore-button:hover {
+    background: linear-gradient(135deg, #8152BC, #EE69D2);  /* Changement de couleur légèrement plus foncé */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);  /* Ajout d'une ombre pour un effet de soulèvement */
+    transform: translateY(-3px);  /* Légère montée du bouton */
+}
+
 /* Style titre */
 
 /*box complette */
@@ -228,6 +240,13 @@ p {
     PADDING: 10PX;
     MARGIN-LEFT: 10PX;
 }
+
+.circle:hover {
+    background-color: #8152BC;  /* Slightly darker shade for hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow for a floating effect */
+    transform: translateX(-50%) scale(1.05);  /* Slight enlargement for emphasis */
+}
+
 .restaurant-section {
     background-color: #f0f0f0; 
     padding: 20px 10px;
@@ -494,5 +513,6 @@ footer {
     font-size: 10px; /* Taille de police */
     font-weight: bold; /* Texte en gras */
 }
+
 
 }
