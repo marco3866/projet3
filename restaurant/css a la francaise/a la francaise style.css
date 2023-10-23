@@ -204,100 +204,93 @@ html, body {
     border-radius: 10px;
     width: 100%;
     margin: 10px 0;
-    padding: 10px;
-    position: relative;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     transition: background-color 0.3s;
+    position: relative;
+}
+
+.description-et-titre {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .item-title {
     font-weight: bold;
-    display: inline-block;
-    margin-right: 10px;
     font-size: 18px;
-    padding-right: 10%;
+    margin: 0;
 }
 
 .item-description {
     font-size: 0.9em;
-    margin: 10px 0;
-    max-width: 80%;
+    margin: 0;
 }
 
-.item-content {
+.item-price-container {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
-    flex-direction: row;
+    align-self: flex-end;
+    align-items: flex-end;
 }
 
 .item-price {
-    position: absolute;
-    right: 5px;
-    bottom: 10px;
-    transform: translateX(10%);
-    transition: 0.9s; 
+    margin-right: 5px;
+    transition: margin-right 0.3s ease;
+    font-size: 14px;
 }
 
-
-
-.clicked-effect {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background-color: rgb(90, 231, 216);
-    border-radius: 10px;
-    z-index: 1;
+.item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    transition: width 0.5s;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0;
+    transition: background-color 0.3s;
     overflow: hidden;
 }
 
-.fa-check {
-    color: rgb(90, 231, 216);
-    display: none;
-    font-size: 20px;
-    background-color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.item-checkbox {
-    display: none; 
-}
-
-.item:hover .fa-check {
-    display: inline-block;
-}
-
-.item:hover .clicked-effect {
-    width: 15%;
-}
-
-.item:hover .item-content .item-price {
-    right: auto;
-    left: calc(70% + 10px);
-    top: 40%;
-    transform: translateY(-50%);
-}
-
-.item:hover .item-content {
+.description-et-titre {
+    flex: 1; /* occuper autant d'espace que possible */
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
-.item:hover .item-description {
-    max-width: 50%;
+.item-price-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 17px;
 }
 
-
-
+.hidecheckbox {
+    width: 0px; /* Pour qu'il n'occupe aucun espace par défaut */
+    height: 80px;
+    background-color: rgb(90, 231, 216); /* Couleur turquoise */
+    transition: width 1s; /* Transition sur la largeur */
+    overflow: hidden; /* Pour masquer le contenu en dehors de la largeur */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ces propriétés s'assurent que l'icône est centrée */
+}
+.item:hover .hidecheckbox {
+    width: 80px; /* Il occupera 80px lors du survol */
+}
+.item-price-container {
+    transition: margin-left 0.9s; /* Ajoutez cette propriété à votre CSS pour .item-price-container */
+}
+.fas.fa-check {
+    color: rgb(90, 231, 216);  /* Couleur turquoise pour le tick */
+    background-color: white;  /* Fond blanc pour l'icône */
+    border-radius: 50%;       /* Pour rendre le fond rond */
+    padding: 10px;            /* Espacement autour de l'icône */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);  /* Ombre légère autour de l'icône */
+}
 /* FOOTER */
 footer {
     background-color: rgb(40, 36, 36); 
