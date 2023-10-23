@@ -269,27 +269,27 @@ html, body {
 }
 
 .hidecheckbox {
-    width: 0px; /* Pour qu'il n'occupe aucun espace par défaut */
+    width: 0px; 
     height: 80px;
-    background-color: rgb(90, 231, 216); /* Couleur turquoise */
-    transition: width 1s; /* Transition sur la largeur */
-    overflow: hidden; /* Pour masquer le contenu en dehors de la largeur */
+    background-color: rgb(90, 231, 216);
+    transition: width 1s; 
+    overflow: hidden; 
     display: flex;
     justify-content: center;
-    align-items: center; /* Ces propriétés s'assurent que l'icône est centrée */
+    align-items: center; 
 }
 .item:hover .hidecheckbox {
-    width: 80px; /* Il occupera 80px lors du survol */
+    width: 80px; 
 }
 .item-price-container {
-    transition: margin-left 0.9s; /* Ajoutez cette propriété à votre CSS pour .item-price-container */
+    transition: margin-left 0.9s; 
 }
 .fas.fa-check {
     color: rgb(90, 231, 216);  /* Couleur turquoise pour le tick */
-    background-color: white;  /* Fond blanc pour l'icône */
-    border-radius: 50%;       /* Pour rendre le fond rond */
-    padding: 10px;            /* Espacement autour de l'icône */
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);  /* Ombre légère autour de l'icône */
+    background-color: white;  
+    border-radius: 50%;       
+    padding: 10px;            
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);  
 }
 /* FOOTER */
 footer {
