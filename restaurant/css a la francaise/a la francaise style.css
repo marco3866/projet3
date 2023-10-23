@@ -235,7 +235,7 @@ html, body {
     position: absolute;
     right: 5px;
     bottom: 10px;
-    transition: transform 0.4s;
+    transition: transform 0.9s;
 }
 
 .clicked-effect {
