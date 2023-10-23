@@ -235,8 +235,11 @@ html, body {
     position: absolute;
     right: 5px;
     bottom: 10px;
-    transition: transform 0.9s;
+    transform: translateX(10%);
+    transition: 0.9s; 
 }
+
+
 
 .clicked-effect {
     position: absolute;
