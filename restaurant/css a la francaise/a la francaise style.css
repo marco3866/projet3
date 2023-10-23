@@ -20,7 +20,6 @@ a {
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
-    width: 100%;
     position: relative; /* Assurez-vous d'avoir cette ligne */
 }
 
@@ -80,7 +79,7 @@ html, body {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
-    display: block; /* Pour supprimer l'espa<a class="back-arrow" href="../index.html">e sous l'image */
+    display: block;
 }
 /* main contenair */
 .block-gray {
@@ -107,7 +106,7 @@ html, body {
 .entree-title {
     margin: 20px 0;
     padding-bottom: 5px;
-    border-bottom: 2px solid turquoise;
+    border-bottom: 2px solid rgb(90, 231, 216);
     text-align: left;
     display: inline-block;  /* Ajouté pour limiter le soulignement à la largeur du mot */
 }
@@ -160,7 +159,7 @@ html, body {
 }
 
 .footer-group.footer-logo h1 {
-    font-size: 24px;  /* Ajustez cette valeur à la taille que vous préférez */
+    font-size: 20px;  /* Ajustez cette valeur à la taille que vous préférez */
     text-align: left;
 }
 
@@ -245,7 +244,7 @@ html, body {
     right: 0;
     width: 0;
     height: 100%;
-    background-color: turquoise;
+    background-color: rgb(90, 231, 216);
     border-radius: 10px;
     z-index: 1;
     display: flex;
@@ -256,15 +255,15 @@ html, body {
 }
 
 .fa-check {
-    color: turquoise;
+    color: rgb(90, 231, 216);
     display: none;
     font-size: 20px;
     background-color: white;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     text-align: center;
-    line-height: 30px;
+    line-height: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .item-checkbox {
@@ -373,46 +372,64 @@ footer {
 
 /* Conteneur principal du pied de page */
 .footer-wrapper {
-    display: flex;
-    justify-content: flex-end; /* Espace entre les éléments */
-    align-items: center; /* Centre les éléments verticalement */
+    display: flex; 
+    align-items: center; 
     width: 100%;
+    margin-left: 100px;
 }
 
 /* Contenu du pied de page (éléments du pied de page) */
 .footer-content {
     display: flex;
-    align-content: center; /* Modifié pour aligner les lignes flexibles */
+    align-content: center; 
     justify-content: space-between;
     width: 80%;
 }
+
 /* Supprimez la propriété white-space: nowrap; pour ces classes */
-.footer-legal,
-.footer-contact,
-.footer-propose,
-.footer-partner {
-    order: 1;
-}
+/* Notez que j'ai supprimé cette section car elle n'avait aucun impact visible dans le code que vous avez fourni. Si nécessaire, vous pouvez ajouter la suppression de white-space. */
 
 /* Chaque groupe d'éléments (logo, mentions légales, contact, etc.) */
-
 .footer-group {
     display: flex;
-    align-items: center; /* Centre les éléments verticalement */
-    margin-left: 20px; /* Espace à gauche de chaque groupe */
+    align-items: center; 
+    margin-left: 20px; 
 }
 
 /* Style spécifique pour le logo "Oh myfood" */
 .footer-logo {
-    order: 5; /* Ordre d'affichage */
-    margin-left: auto; /* Pousse "Oh myfood" tout à droite */
+    order: 5; 
+    margin-left: auto; 
     margin-top: 20px;
-    font-size: 10px; /* Taille de police */
-    font-weight: bold; /* Texte en gras */
+    font-size: 10px; 
+    font-weight: bold; 
+}
+.custom-title2 {
+    font-family: 'Shrikhand', cursive; /* Applique la police spécifique */
+    font-weight: bold; /* Rend le texte gras */
+    color: white; /* Couleur du texte (blanc) */
+    margin-left: 100px;
+}
+
+
+.footer-propose {
+    order: 1;
+}
+
+.footer-partner {
+    order: 2;
+}
+
+.footer-legal {
+    order: 3;
+}
+
+.footer-contact {
+    order: 4;
 }
 .footer-group.footer-logo h1 {
-    font-size: 24px;  /* Ajustez cette valeur à la taille que vous préférez */
-    margin-right: 15px;
+    font-size: 18px;  /* Ajustez cette valeur à la taille que vous préférez */
+    margin-left: 25px;
     margin-top: 1px;
 }
 }
