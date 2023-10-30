@@ -533,37 +533,32 @@ footer {
 /* Conteneur principal du pied de page */
 /* Conteneur principal du pied de page */
 .footer-wrapper {
-    font-size: 12px;
     display: flex; 
     align-items: center; 
     width: 100%;
-    margin-left: 18%;
+    margin-left: 100px;
 }
 
-/* Contenu du pied de page (éléments du pied de page) */
 .footer-content {
     display: flex;
     align-content: center; 
-    justify-content: space-between;
-    width: 80%;
+    justify-content: flex-end;  /* Aligner le contenu à droite */
+    width: 90%;  /* Prendre toute la largeur disponible */
+    padding-right: 10px;  /* Marge de 10px à droite */
 }
 
-/* Supprimez la propriété white-space: nowrap; pour ces classes */
-/* Notez que j'ai supprimé cette section car elle n'avait aucun impact visible dans le code que vous avez fourni. Si nécessaire, vous pouvez ajouter la suppression de white-space. */
-
-/* Chaque groupe d'éléments (logo, mentions légales, contact, etc.) */
 .footer-group {
     display: flex;
-    align-items: center;
-    margin-left: 10px; 
-    margin-left: 10px;
+    align-items: center; 
+    margin-left: 15px;  /* Marge entre chaque groupe */
 }
 
 /* Style spécifique pour le logo "Oh myfood" */
 .footer-logo {
-    order: 5;  
+    order: 5; 
+    margin-left: 0;  /* Réinitialisation de la marge gauche */
     margin-top: 20px;
-    font-size: 6px; 
+    font-size: 10px; 
     font-weight: bold; 
 }
 .custom-title2 {
@@ -573,7 +568,11 @@ footer {
     margin-left: 40px;
     font-size: 15px;
 }
-
+.footer-group.footer-logo h1 {
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 1px;
+}
 
 .footer-propose {
     order: 1;
