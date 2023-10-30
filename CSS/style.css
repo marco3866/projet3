@@ -491,7 +491,7 @@ footer {
 }
 .h1-decale {
     padding-left: 20px;
-    margin-left: 57px;
+    margin-left: 5%;
 }
 .circle {
     position: absolute; /* Pour positionner le cercle par rapport au .step */
@@ -525,7 +525,7 @@ footer {
     margin-top: 10px; /* Ajoute de l'espace au-dessus et en dessous du titre et du texte */
 }
 .decale {
-    margin-left: 57px;  /* Ajustez cette valeur selon le décalage souhaité */
+    margin-left: 5%;  /* Ajustez cette valeur selon le décalage souhaité */
     margin-top: 5%;
 }
 /* Styles généraux du pied de page */
@@ -570,7 +570,7 @@ footer {
 }
 .footer-group.footer-logo h1 {
     font-size: 18px;
-    margin-left: 50px;
+    margin-left: 65px;
     margin-top: 1px;
 }
 
