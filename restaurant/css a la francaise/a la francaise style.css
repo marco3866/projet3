@@ -216,10 +216,13 @@ html, body {
 }
 
 .description-et-titre {
-    flex-grow: 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
+    /* Ces propriétés sont ajoutées pour tronquer le texte */
+    max-width: calc(100% - 95px);  /* 80px pour la checkbox + 15px de marge */
+    overflow: hidden;
 }
 
 .item-title {
@@ -258,12 +261,20 @@ html, body {
 }
 
 .description-et-titre {
-    flex: 1; /* occuper autant d'espace que possible */
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    overflow: hidden;
+    margin-right: 10px; /* Pour éviter la superposition avec le conteneur de prix */
 }
 
+.item-title, .item-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 20px);  /* 80px pour la "checkbox" + 15px de marge */
+}
 .item-price-container {
     display: flex;
     align-items: center;
@@ -271,16 +282,17 @@ html, body {
     margin-bottom: 17px;
 }
 
+
 .hidecheckbox {
     width: 0px; 
     height: 80px;
-    background-color: 
-    #99E2D0;
+    background-color: #99E2D0;
     transition: width 1s; 
     overflow: hidden; 
     display: flex;
     justify-content: center;
     align-items: center; 
+    flex-shrink: 0;  /* Cela garantit que la "checkbox" ne se rétrécit pas au-delà de sa largeur de 0px */
 }
 .item:hover .hidecheckbox {
     width: 80px; 
